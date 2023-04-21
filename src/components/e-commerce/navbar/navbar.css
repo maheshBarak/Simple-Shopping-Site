@@ -1,17 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Lato&family=Montserrat+Subrayada:wght@400;700&family=Mukta&family=Nunito:wght@400;500&family=Open+Sans:wght@400;500&family=Roboto:wght@300;400;500;700&family=Tilt+Warp&display=swap');
 
 nav {
-    background-color: darkcyan;
-    padding: 18px 30px;
+    background-color: #5fa0dd;
+    padding: 18px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .banner {
     color: rgb(180, 236, 236);
     cursor: pointer;
-    font-family: 'Montserrat Subrayada', cursive;
+    font-family: 'Rampart One', cursive;
     font-size: 2.1rem;
     text-shadow: 4px 4px rgb(0, 0, 0);
     transform: rotate(-6deg);

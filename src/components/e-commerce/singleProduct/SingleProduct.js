@@ -1,8 +1,6 @@
 import React from "react";
 import "./singleProduct.css";
 import { BsCurrencyDollar } from "react-icons/bs";
-import { AiOutlinePlus } from "react-icons/ai";
-import { AiOutlineMinus } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, removeFromCart } from "../../../redux/slice/cartSlice";
 function SingleProduct({ product }) {
@@ -13,25 +11,32 @@ function SingleProduct({ product }) {
   const curQuantity = curItem ? curItem.quantity : 0;
   return (
     <div className="singleProduct">
-      <img className="productImg" src={product.image} alt={product.title} />
-      <div className="productInfo">
-        <h2 className="productTitle">{product.title}</h2>
-        <p className="productPrice">
-          <BsCurrencyDollar />
-          {product.price}
-        </p>
+      <div className="image">
+        <img className="productImg" src={product.image} alt={product.title} />
       </div>
-      <div className="cartInfo">
-        <button
-          className="button"
-          onClick={() => dispatch(removeFromCart(product.id))}
-        >
-          -
-        </button>
-        <h4>{curQuantity}</h4>
-        <button className="button" onClick={() => dispatch(addToCart(product))}>
-          +
-        </button>
+      <div className="exclude-img">
+        <div className="productInfo">
+          <h4 className="productTitle">{product.title}</h4>
+          <h5 className="productPrice">
+            <BsCurrencyDollar />
+            {product.price}
+          </h5>
+        </div>
+        <div className="cartInfo">
+          <button
+            className="button"
+            onClick={() => dispatch(removeFromCart(product.id))}
+          >
+            -
+          </button>
+          <h4>{curQuantity}</h4>
+          <button
+            className="button"
+            onClick={() => dispatch(addToCart(product))}
+          >
+            +
+          </button>
+        </div>
       </div>
     </div>
   );

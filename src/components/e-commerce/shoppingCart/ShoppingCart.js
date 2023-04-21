@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./shoppingCart.css";
 import { ImCancelCircle } from "react-icons/im";
+import { GrNext } from "react-icons/gr";
 import { removeItem } from "../../../redux/slice/cartSlice";
 import image from "./7612.jpg";
 import { useNavigate } from "react-router-dom";
@@ -35,6 +36,7 @@ function ShoppingCart() {
       </>
     );
   }
+
   //  console.log(amount);
   return (
     <div className="ShoppingCart">
@@ -54,13 +56,18 @@ function ShoppingCart() {
                 className="remove"
                 onClick={() => dispatch(removeItem(item.id))}
               >
-                <ImCancelCircle className="btn remove" />
+                <ImCancelCircle className=" remove" />
               </button>
             </section>
           </div>
         );
       })}
-      <h2 className="total">Total : $ {amount.toFixed(3)}</h2>
+      <div className="ending">
+        <button onClick={SendToHome} className="btn">
+          Shop More <GrNext className="icon" />
+        </button>
+        <h2 className="total">Total : $ {amount.toFixed(3)}</h2>
+      </div>
     </div>
   );
 }

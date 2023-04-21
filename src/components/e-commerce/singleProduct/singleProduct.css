@@ -1,23 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Nunito+Sans:wght@300&family=Poppins:wght@100;200;300;400;600;700&family=Proza+Libre&family=Rampart+One&family=Roboto+Mono:wght@100;200;300;400&family=Roboto:wght@100;300;400;500&family=Rubik&family=Shantell+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+
 .singleProduct {
-    border: 2px solid #ccc;
-    border-radius: 8px;
+    /* border: 2px solid #ccc;
+    border-radius: 8px; */
+    background: white;
+    text-align: center;
+    width: 100%;
+    background-color: #b0d9ff;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    transition: 0.3s;
+}
+
+.image {
+    padding: 20px;
+    background-color: #fff;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 5px;
 }
 
 .productImg {
-    width: 100%;
+    /* width: 100%;
     padding: 14px 10px;
     object-fit: contain;
-    height: 50%;
+    height: 50%; */
+    height: 80px;
+}
+
+.exclude-img {
+    width: 100%;
+    padding-bottom: 20px;
+
 }
 
 .productInfo {
-    padding: 20px;
+    padding-top: 20px;
+    font-family: 'Rampart One', cursive;
+    font-family: 'Shantell Sans', cursive;
+
 }
 
 .productPrice {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Shantell Sans', cursive;
+    margin: 10px;
 }
 
 .cartInfo {
@@ -28,7 +58,7 @@
 }
 
 .button {
-    padding: 20px;
+    /* padding: 20px;
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -38,5 +68,22 @@
     align-items: center;
     justify-content: center;
     font-size: 2rem;
+    border: none; */
     border: none;
+    outline: none;
+    background: #015e86;
+    padding: 5px 10px;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+    background: #00293b;
+}
+
+.singleProduct:hover {
+    transform: scale(1.05);
 }
